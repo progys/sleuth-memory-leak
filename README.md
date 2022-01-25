@@ -10,7 +10,7 @@ spring:
   sleuth:
     enabled: false
 ```
-after change running same command `mvnw test` does not print any memory leak reports in the log.
+after disabling sleuth and running same command `mvnw test` - app does not print any memory leak reports in the log.
 
 **Test scenario**
 - Netty based rsocket server listens for incoming rocket request using request/reply pattern (even though also reproducible with channel or stream, so seems not related);
