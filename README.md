@@ -10,7 +10,7 @@ spring:
   sleuth:
     enabled: false
 ```
-and run same command `mvnw test` and observe no memory leak reports being printed in the log.
+after change running same command `mvnw test` does not print any memory leak reports in the log.
 
 **Test scenario**
 - Netty based rsocket server listens for incoming rocket request using request/reply pattern (even though also reproducible with channel or stream, so seems not related);
