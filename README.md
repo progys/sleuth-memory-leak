@@ -1,9 +1,18 @@
 # sleuth-memory-leak
-Minimal example to reproduce sleuth memory leak with netty + rsocket
+Minimal example to reproduce sleuth memory leak with netty + rsocket: https://github.com/spring-cloud/spring-cloud-sleuth/issues/2102
 
+To run it with sleuth enabled and memory leak effect execute: 
+`mvnw test`
+
+To run it with sleuth disabled change `application.yml` to contain the below fragment:
+```
+spring:
+  sleuth:
+    enabled: false
+```
+and run same command `mvnw test` and observe no memory leak reports being printed in the log.
 
 **Test scenario**
-
 - Netty based rsocket server listens for incoming rocket request using request/reply pattern (even though also reproducible with channel or stream, so seems not related);
 - Client sends request/reply with empty json object (can be any payload);
 - Server replies with plain text;
