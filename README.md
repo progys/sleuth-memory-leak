@@ -1,3 +1,5 @@
+[![Java CI with Maven](https://github.com/progys/sleuth-memory-leak/actions/workflows/maven.yml/badge.svg)](https://github.com/progys/sleuth-memory-leak/actions/workflows/maven.yml)
+
 # sleuth-memory-leak
 Minimal example to reproduce sleuth memory leak with netty + rsocket: https://github.com/spring-cloud/spring-cloud-sleuth/issues/2102
 
